@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="Javascript/site.js" ></script>
+        
+   <style>
+body {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+.container h2{
+    font-size: 26px;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: purple;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: blue;
+}
+
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+/* Styling the icon images*/
+img{
+  width: 30%;
+  padding: 1%;
+}
+table{
+  padding-left: 23%;
+  padding-right: 10%;
+}
+
+    </style>
+    </head>
+    <body>
+      
+        <div class="container">
+          <div class="backbutton">
+            <form>
+              <input type="button" value="Click here to go back!" onclick="history.back()">
+            </form>
+          </div>
+            <div style="text-align:center">
+                <h2>Contact Me</h2>
+                <p>Give a call on 0897***** or leave me a message</p>
+            </div>
+            <br>
+            <table>
+            <tr>
+              <td><a href="https://www.facebook.com/"><img src="Images/iconfinder_online_social_media_facebook_734386.png"></a></td>
+              <td><a href="https://twitter.com/?lang=en"><img src="Images/iconfinder_twitter_online_social_media_734367.png"></a></td>
+              <td><a href="https://www.instagram.com/"><img src="Images/iconfinder_instagram_online_social_media_photo_734395.png"></a></td>
+              <td><a href="https://ie.yahoo.com/"><img src="Images/iconfinder_Email_4550857.png"></a></td>
+            </tr>
+            </table>
+            <div class="row">
+                <div class="column">
+                    <img src="Images/kisspng-playstation-2-logo-game-logo-5ad58e5a15a355.7068686815239450500886.png" style="width:80%" height="80%">
+                </div>
+                <div class="column">
+                    <!--<form action="/action_page.php">-->
+                      <form name="myform" method="post" action="/action_page.php" onsubmit="return valiateform()">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                        <label for="gender">Please select your gender</label><br><br>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label><br>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label><br>
+                        <input type="radio" id="other" name="gender" value="other">
+                        <label for="other">Other</label><br><br>
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="email address" required placeholder="Enter your email address..">
+                      <label for="age">Age</label><br><br>
+                      <input type="checkbox" id="Age 18-28" name="Age 1" value="Age bar 1">
+                      <label for="Age 18-28">18-28</label><br>
+                      <input type="checkbox" id="Age 29-40" name="Age 2" value="Age bar 2">
+                      <label for="Age 29-20">29-40</label><br>
+                      <input type="checkbox" id="Age 40-59" name="Age 3" value="Age bar 3">
+                      <label for="Age 40-59">40-59</label><br><br>
+                        <label for="country">Country</label>
+                        <select id="country" name="country">
+                          <option value="Ireland">Ireland</option>
+                          <option value="United Kingdom">United Kingdom</option>
+                          <option value="usa">USA</option>
+                        </select>
+                        <label for="subject">Subject</label>
+                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:150px"></textarea>
+                        <input type="submit" value="Submit">
+                      </form> 
+                    <!--</form>-->
+
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>
